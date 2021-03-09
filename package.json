@@ -1,0 +1,41 @@
+{
+	"name": "@themaxdavitt/league-of-legends-ocr",
+	"version": "0.0.1",
+	"description": "Use OCR to read values from League of Legends spectator mode (uses Leptonica and Tesseract)",
+	"scripts": {
+		"build": "node-gyp build && tsc",
+		"test": "ts-node test.ts"
+	},
+	"keywords": [
+		"ocr",
+		"leptonica",
+		"tesseract",
+		"riot",
+		"riot games",
+		"lol",
+		"league of legends"
+	],
+	"author": "Max Davitt <max@davitt.me>",
+	"license": "MIT",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"gypfile": true,
+	"dependencies": {
+		"bindings": "^1.5.0",
+		"node-addon-api": "^3.1.0"
+	},
+	"devDependencies": {
+		"@types/bindings": "^1.5.0",
+		"@types/node": "^14.14.31",
+		"husky": "^5.1.3",
+		"prettier": "^2.2.1",
+		"pretty-quick": "^3.1.0",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	}
+}
